@@ -1,0 +1,14 @@
+framework module ActantSDK {
+    umbrella header "ActantSDK.h"
+
+    header "ARNativeTools.h"
+    header "LibORBWrapper.h"
+
+    export *
+    module * { export * }
+}
+
+module ActantSDK.Swift {
+    header "ActantSDK-Swift.h"
+    requires objc
+}
