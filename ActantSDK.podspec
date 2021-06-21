@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "ActantSDK"
-    s.version      = "1.0.2"
+    s.version      = "1.0.3"
     s.summary      = "A brief description of ActantSDK project."
     s.description  = <<-DESC
     An extended description of ActantSDK project.
