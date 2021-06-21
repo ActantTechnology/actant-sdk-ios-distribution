@@ -22,31 +22,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rsD8b9F6L94FzBJlzTKu48Nnk6Q=
+		xQXhsCPTOe764lVQvS6tggaCwL8=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		JwpmL+OFwO/ZEmci7neDg4m/MZQ=
+		3ZlHHEW3qgghRYlZ5GadGzz1/uk=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		zywa+PLqZ8A9irNzEdPf8WlH7P8=
+		e5FOVUHhIKzkjRiaduHo5o6lnXw=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		KwaojdtKZoefgfRKSkxg/q+5Tmw=
+		XNh70woRxgRxtvYlrcKPvAku6eg=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		JwpmL+OFwO/ZEmci7neDg4m/MZQ=
+		3ZlHHEW3qgghRYlZ5GadGzz1/uk=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		zywa+PLqZ8A9irNzEdPf8WlH7P8=
+		e5FOVUHhIKzkjRiaduHo5o6lnXw=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		KwaojdtKZoefgfRKSkxg/q+5Tmw=
+		XNh70woRxgRxtvYlrcKPvAku6eg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -87,42 +87,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tlil4EBLm0nyQ++rsA1OE7zJqr6IPxLNz4qC1XYWsuY=
+			uYojIiMLbE+wYrY7inM278YOzi1azfEgVGGWc7NBhS0=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvP2WBKRGPqgFxsMfEue8ZbeO5A1UXAxiNG3IVD/YHY=
+			5fOE81l+vjI18fXWEshBww3sb0SKWQQyTOFTVEyfE1s=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HxqlB+gP7N5mqmfxxBmLBf5QsyOoRJpzyMpSPX6L5bI=
+			lAjJ2qz+Mlc1uc8Ou3Zol1+WszDLDy8zflFUhs8jups=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tlil4EBLm0nyQ++rsA1OE7zJqr6IPxLNz4qC1XYWsuY=
+			uYojIiMLbE+wYrY7inM278YOzi1azfEgVGGWc7NBhS0=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WvP2WBKRGPqgFxsMfEue8ZbeO5A1UXAxiNG3IVD/YHY=
+			5fOE81l+vjI18fXWEshBww3sb0SKWQQyTOFTVEyfE1s=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HxqlB+gP7N5mqmfxxBmLBf5QsyOoRJpzyMpSPX6L5bI=
+			lAjJ2qz+Mlc1uc8Ou3Zol1+WszDLDy8zflFUhs8jups=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
