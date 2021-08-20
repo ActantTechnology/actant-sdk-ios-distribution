@@ -1,13 +1,238 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios14.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ActantSDK
+import ARKit
 @_exported import ActantSDK
 import CommonCrypto
+import CoreLocation
+import CoreMotion
 import Darwin
 import Foundation
+import GRPC
+import Logging
 import MachO
+import NIO
+import NIOHPACK
+import NIOTransportServices
+import SceneKit
 import Swift
+import SwiftProtobuf
 import UIKit
-public enum ActantSDK {
-  public static func echo()
+import simd
+extension SCNView {
+  public func virtualObjectNodeByHit(location: CoreGraphics.CGPoint) -> ActantSDK.VirtualObjectNode?
 }
+extension SIMD3 where Scalar == Swift.Float {
+  public func length() -> Swift.Float
+}
+extension simd_float4x4 {
+  public var translation: simd.simd_float3 {
+    get
+    set(newValue)
+  }
+  public var orientation: simd.simd_quatf {
+    get
+  }
+  public init(uniformScale scale: Swift.Float)
+}
+@objc public class ArAdapter : ObjectiveC.NSObject, ARKit.ARSCNViewDelegate, ARKit.ARSessionDelegate {
+  weak public var delegate: ActantSDK.ArAdapterDelegate?
+  weak public var arSessionDelegate: ActantSDK.ActantARSessionDelegate?
+  weak public var arSceneViewDelegate: ActantSDK.ActantARSCNViewDelegate?
+  public var preferredFramesPerSecond: Swift.Int {
+    get
+    set
+  }
+  public var visibilityDistance: Swift.Double {
+    get
+    set
+  }
+  final public let sceneView: ARKit.ARSCNView
+  public init(sceneView: ARKit.ARSCNView)
+  public var locatedVirtualMapNodes: [ActantSDK.VirtualMapNode] {
+    get
+  }
+  public func locatedVirtualMapNodeBy(id: Swift.String) -> ActantSDK.VirtualMapNode?
+  public func spawnVirtualObjectNode(virtualMapId: Swift.String = "", metaInfo: Swift.String = "", block: @escaping (ActantSDK.VirtualObjectNode?, Swift.Error?) -> Swift.Void)
+  public func publish(virtualObjectNode: ActantSDK.VirtualObjectNode, to virtualMapNode: ActantSDK.VirtualMapNode? = nil, block: @escaping (ActantSDK.VirtualObjectNode?, Swift.Error?) -> Swift.Void)
+  public func unpublish(virtualObjectNode: ActantSDK.VirtualObjectNode, block: @escaping (ActantSDK.VirtualObjectNode?, Swift.Error?) -> Swift.Void)
+  public func delete(virtualObjectNode: ActantSDK.VirtualObjectNode, block: @escaping (Swift.Error?) -> Swift.Void)
+  final public let hud: ActantSDK.HudNode
+  public var hudEnabled: Swift.Bool {
+    get
+    set
+  }
+  public var useInfinitPlaneDetection: Swift.Bool
+  public var useVirtualMapRelocation: Swift.Bool
+  public func start()
+  public func stop()
+  @objc public func session(_ session: ARKit.ARSession, didUpdate frame: ARKit.ARFrame)
+  @objc public func session(_ session: ARKit.ARSession, didAdd anchors: [ARKit.ARAnchor])
+  @objc public func session(_ session: ARKit.ARSession, didUpdate anchors: [ARKit.ARAnchor])
+  @objc public func session(_ session: ARKit.ARSession, didRemove anchors: [ARKit.ARAnchor])
+  @objc public func session(_ session: ARKit.ARSession, didFailWithError error: Swift.Error)
+  @objc public func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
+  @objc public func sessionWasInterrupted(_ session: ARKit.ARSession)
+  @objc public func sessionInterruptionEnded(_ session: ARKit.ARSession)
+  @objc public func sessionShouldAttemptRelocalization(_ session: ARKit.ARSession) -> Swift.Bool
+  @objc public func session(_ session: ARKit.ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CoreMedia.CMSampleBuffer)
+  @objc public func session(_ session: ARKit.ARSession, didOutputCollaborationData data: ARKit.ARSession.CollaborationData)
+  @objc public func session(_ session: ARKit.ARSession, didChange geoTrackingStatus: ARKit.ARGeoTrackingStatus)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, nodeFor anchor: ARKit.ARAnchor) -> SceneKit.SCNNode?
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didAdd node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, willUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didRemove node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, updateAtTime time: Foundation.TimeInterval)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didApplyAnimationsAtTime time: Foundation.TimeInterval)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didSimulatePhysicsAtTime time: Foundation.TimeInterval)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didApplyConstraintsAtTime time: Foundation.TimeInterval)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, willRenderScene scene: SceneKit.SCNScene, atTime time: Foundation.TimeInterval)
+  @objc public func renderer(_ renderer: SceneKit.SCNSceneRenderer, didRenderScene scene: SceneKit.SCNScene, atTime time: Foundation.TimeInterval)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension String : Swift.Identifiable {
+  public var id: Swift.String? {
+    get
+  }
+  public typealias ID = Swift.String?
+}
+extension String {
+  public func localized(_ bundle: Foundation.Bundle? = nil) -> Swift.String
+  public func localized(_ bundle: Foundation.Bundle? = nil, params: Swift.CVarArg...) -> Swift.String
+}
+extension String : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@objc @_hasMissingDesignatedInitializers public class VirtualMapNode : SceneKit.SCNNode, Swift.Identifiable {
+  public var id: Swift.String {
+    get
+  }
+  public var label: Swift.String {
+    get
+  }
+  public var virtualObjectNodes: [ActantSDK.VirtualObjectNode] {
+    get
+  }
+  public var locatedFrameIndex: Swift.UInt32 {
+    get
+  }
+  public static func == (lhs: ActantSDK.VirtualMapNode, rhs: ActantSDK.VirtualMapNode) -> Swift.Bool
+  @objc override dynamic public init()
+  public typealias ID = Swift.String
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class HudNode : SceneKit.SCNNode {
+  public var primaryColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var fillColor: UIKit.UIColor {
+    get
+    set
+  }
+  public var hudModel: SceneKit.SCNNode? {
+    get
+    set
+  }
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class VirtualObjectNode : SceneKit.SCNNode, Swift.Identifiable {
+  public var id: Swift.UInt64 {
+    get
+  }
+  public var virtualMapId: Swift.String {
+    get
+  }
+  public var metaInfo: Swift.String {
+    get
+    set
+  }
+  @objc override dynamic public init()
+  public typealias ID = Swift.UInt64
+  @objc deinit
+}
+@objc public protocol ArAdapterDelegate {
+  @objc optional func onArStarted(_ sessionId: Swift.String)
+  @objc optional func onArStopped(_ sessionId: Swift.String)
+  @objc optional func onArMessage(logLevel: ActantSDK.ActantSDK.LogLevel, message: Swift.String)
+  @objc optional func onHudEnabled(enabled: Swift.Bool)
+  @objc optional func onPlaneOn(alignment: ARKit.ARPlaneAnchor.Alignment, lastWorldTransform: simd.simd_float4x4)
+  @objc optional func onPlaneOff(lastWorldTransform: simd.simd_float4x4)
+  @objc optional func onDebugTelemetry(message: Swift.String)
+  @objc optional func onDebugVirtualMaps(message: Swift.String)
+  @objc optional func onVirtualMapLocated(virtualMapNode: ActantSDK.VirtualMapNode)
+  @objc optional func onVirtualObjectNodeAdded(_ virtualObjectNode: ActantSDK.VirtualObjectNode)
+  @objc optional func onVirtualObjectNodeDeleted(_ virtualObjectNode: ActantSDK.VirtualObjectNode)
+}
+@objc public protocol ActantARSessionDelegate : ActantSDK.ActantARSessionObserver {
+  @objc optional func session(_ session: ARKit.ARSession, didUpdateFrame: ARKit.ARFrame)
+  @objc optional func session(_ session: ARKit.ARSession, didAdd anchors: [ARKit.ARAnchor])
+  @objc optional func session(_ session: ARKit.ARSession, didUpdate anchors: [ARKit.ARAnchor])
+  @objc optional func session(_ session: ARKit.ARSession, didRemove anchors: [ARKit.ARAnchor])
+}
+@objc public protocol ActantARSessionObserver {
+  @objc optional func session(_ session: ARKit.ARSession, didFailWithError error: Swift.Error)
+  @objc optional func session(_ session: ARKit.ARSession, cameraDidChangeTrackingState camera: ARKit.ARCamera)
+  @objc optional func sessionWasInterrupted(_ session: ARKit.ARSession)
+  @objc optional func sessionInterruptionEnded(_ session: ARKit.ARSession)
+  @available(iOS 11.3, *)
+  @objc optional func sessionShouldAttemptRelocalization(_ session: ARKit.ARSession) -> Swift.Bool
+  @objc optional func session(_ session: ARKit.ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CoreMedia.CMSampleBuffer)
+  @available(iOS 13.0, *)
+  @objc optional func session(_ session: ARKit.ARSession, didOutputCollaborationData data: ARKit.ARSession.CollaborationData)
+  @available(iOS 14.0, *)
+  @objc optional func session(_ session: ARKit.ARSession, didChange geoTrackingStatus: ARKit.ARGeoTrackingStatus)
+}
+@objc public protocol ActantARSCNViewDelegate : ActantSDK.ActantARSessionObserver, ActantSDK.ActantSCNSceneRendererDelegate {
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, nodeFor anchor: ARKit.ARAnchor) -> SceneKit.SCNNode?
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didAdd node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, willUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didUpdate node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didRemove node: SceneKit.SCNNode, for anchor: ARKit.ARAnchor)
+}
+@objc public protocol ActantSCNSceneRendererDelegate {
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, updateAtTime time: Foundation.TimeInterval)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didApplyAnimationsAtTime time: Foundation.TimeInterval)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didSimulatePhysicsAtTime time: Foundation.TimeInterval)
+  @available(iOS 11.0, *)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didApplyConstraintsAtTime time: Foundation.TimeInterval)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, willRenderScene scene: SceneKit.SCNScene, atTime time: Foundation.TimeInterval)
+  @objc optional func renderer(_ renderer: SceneKit.SCNSceneRenderer, didRenderScene scene: SceneKit.SCNScene, atTime time: Foundation.TimeInterval)
+}
+@_hasMissingDesignatedInitializers final public class ActantSDK {
+  public enum InitializeOption {
+    case apiKey(Swift.String)
+    case logLevel(ActantSDK.ActantSDK.LogLevel)
+  }
+  final public class func initialize(_ options: [ActantSDK.ActantSDK.InitializeOption])
+  @objc deinit
+}
+extension ActantSDK {
+  @objc public enum LogLevel : Swift.Int {
+    case trace
+    case debug
+    case info
+    case notice
+    case warning
+    case error
+    case critical
+    public func localizedDescription() -> Swift.String
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+}
+extension ActantSDK {
+  public static var logLevel: ActantSDK.ActantSDK.LogLevel {
+    get
+  }
+}
+extension ActantSDK.ActantSDK.LogLevel : Swift.Equatable {}
+extension ActantSDK.ActantSDK.LogLevel : Swift.Hashable {}
+extension ActantSDK.ActantSDK.LogLevel : Swift.RawRepresentable {}

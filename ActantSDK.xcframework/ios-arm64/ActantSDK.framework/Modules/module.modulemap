@@ -1,7 +1,6 @@
 framework module ActantSDK {
     umbrella header "ActantSDK.h"
 
-    header "ARNativeTools.h"
     header "LibORBWrapper.h"
 
     export *

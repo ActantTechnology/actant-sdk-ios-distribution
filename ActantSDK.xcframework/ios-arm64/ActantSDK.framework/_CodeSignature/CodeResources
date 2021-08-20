@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/ARNativeTools.h</key>
-		<data>
-		yMv42BzBXpO+rCPRfMuOWFQSJMU=
-		</data>
 		<key>Headers/ActantSDK-Swift.h</key>
 		<data>
-		VM1l2lsHl8A42VPnIg6TTK0e418=
+		iHGPK9VyEd19D/NOUQyJkj2GEoM=
 		</data>
 		<key>Headers/ActantSDK.h</key>
 		<data>
@@ -22,51 +18,62 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bWYquyDGkUXKgFm0hOlGfiEQJFs=
+		W2c4xGiLjCFmoz/5GyNQLq2oUqk=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		JwpmL+OFwO/ZEmci7neDg4m/MZQ=
+		JK0hf2dkuhgbBD6WuBy1v1eG2m0=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		ZPWocKRFfa1uiqetLTETdN+E0ks=
+		j19rxVxbd26a0p6EPC2A69M5Z/A=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		3l7cW7p3Dvzip5ZKb4MmxMOrIcM=
+		JKwrAekteYdXg5N8mbdceIYfm+0=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		JwpmL+OFwO/ZEmci7neDg4m/MZQ=
+		JK0hf2dkuhgbBD6WuBy1v1eG2m0=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftinterface</key>
 		<data>
-		ZPWocKRFfa1uiqetLTETdN+E0ks=
+		j19rxVxbd26a0p6EPC2A69M5Z/A=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		3l7cW7p3Dvzip5ZKb4MmxMOrIcM=
+		JKwrAekteYdXg5N8mbdceIYfm+0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		/VsfLYW/DprffKovRvlABsYuka0=
+		Y+RT272kK23k5/Mp0zoZ/ZmKQM0=
 		</data>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			o1rPqf2c0KO6+Emm8tIVaELKNb4=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			WqLApUZ69e4V9OrHKocxVxOD4iw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/ARNativeTools.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			Z8Ul4Hwndd9W/PEq7doP2JVW5QkYLslGR0V5j87J3+o=
-			</data>
-		</dict>
 		<key>Headers/ActantSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3dbzme3Z1gc8eySdbFtiNXpmNX7qD/ap/GxhQeauh7E=
+			tBCacQ45fY21mrCJNrsx9YBxsLOsprfgiAA60ylZifY=
 			</data>
 		</dict>
 		<key>Headers/ActantSDK.h</key>
@@ -87,50 +94,68 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tlil4EBLm0nyQ++rsA1OE7zJqr6IPxLNz4qC1XYWsuY=
+			cE8Ve8YMkdVo1gvmVHp1k7rw6p1nqo6uPP3uu+lh7ds=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F1ICSJ2OseSi8iEiktjCE5QqOUPoVoyGxvFeX2MYIUE=
+			ZnJ0Mn+Vd41FQmuzgVIofu8DiOvrxacfM2sB4vfn9Kc=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7t8kGG5VBG2lG88XlnkLErkgneC7Otk3DnGCH+pCuIc=
+			h0TF/OwsGb6/VKqxuA7qEvEO0tRMxFHzkUr4KvSy4QY=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tlil4EBLm0nyQ++rsA1OE7zJqr6IPxLNz4qC1XYWsuY=
+			cE8Ve8YMkdVo1gvmVHp1k7rw6p1nqo6uPP3uu+lh7ds=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			F1ICSJ2OseSi8iEiktjCE5QqOUPoVoyGxvFeX2MYIUE=
+			ZnJ0Mn+Vd41FQmuzgVIofu8DiOvrxacfM2sB4vfn9Kc=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7t8kGG5VBG2lG88XlnkLErkgneC7Otk3DnGCH+pCuIc=
+			h0TF/OwsGb6/VKqxuA7qEvEO0tRMxFHzkUr4KvSy4QY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zl412jf2etYBZmklsIFnAykAsj9ZfFV3vBoLkob26yA=
+			KZIfAHFv/mPf8ofHAJxhyFp1zqmCqGHng0bZDkv2okE=
 			</data>
+		</dict>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2bSxxvvXLimlkGM0tgs683tIC42cnMGYp454xVuXCa0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>ru.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			RsVL/tqq5k5zzdoVVf2KvurbcscOj31ReIFNujDh1Q4=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>
