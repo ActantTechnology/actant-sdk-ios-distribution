@@ -18,7 +18,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		bpLTKORLjFXZx9/6jHkIBaQ+Nso=
+		e7BXpoHzfJEiSMNh2jJob94j9O0=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,7 +30,7 @@
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		zap9XgPu+WJEIuyXwu1AeS15M1c=
+		ZAlVU4OuWcResoO983rBPrKJcnc=
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		zap9XgPu+WJEIuyXwu1AeS15M1c=
+		ZAlVU4OuWcResoO983rBPrKJcnc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -108,7 +108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O9BiTfEp1Od6u37g9h/4sPknkKwjIFFBO3/QIcsbrWo=
+			za5hvchDO1IV5+ba6kyClEN2pLvXxA4CnvcbCUCyXbA=
 			</data>
 		</dict>
 		<key>Modules/ActantSDK.swiftmodule/arm64.swiftdoc</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			O9BiTfEp1Od6u37g9h/4sPknkKwjIFFBO3/QIcsbrWo=
+			za5hvchDO1IV5+ba6kyClEN2pLvXxA4CnvcbCUCyXbA=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
