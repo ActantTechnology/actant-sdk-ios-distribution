@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
     s.swift_versions          = ['5.0', '5.1', '5.2', '5.3', '5.4', '5.5']
     s.platform                = :ios
     s.ios.deployment_target   = '14.5'
-    s.source                  = { :http => "https://github.com/ActantTechnology/actant-sdk-ios-distribution/raw/#{s.version}/ActantSDK.zip" }
+    s.source                  = { :git => "https://github.com/ActantTechnology/actant-sdk-ios-distribution.git", :tag => "#{s.version}" }
 
     s.frameworks = 'UIKit', 'SceneKit', 'ARKit', 'CoreLocation', 'CoreMotion'
     s.dependency 'gRPC-Swift', '~> 1.4.0'
