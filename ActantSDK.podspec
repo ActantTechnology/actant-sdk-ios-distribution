@@ -7,6 +7,7 @@ Pod::Spec.new do |s|
     s.author                  = { "Actant Technology" => "dev@actanttech.com" }
     s.license                 = { :type => 'Apache-2.0', :file => 'LICENSE' }
 
+    s.swift_versions          = ['5.0', '5.1', '5.2', '5.3', '5.4']
     s.platform                = :ios
     s.ios.deployment_target   = '14.5'
     s.source                  = { :git => "https://github.com/ActantTechnology/actant-sdk-ios-distribution.git", :tag => "#{s.version}" }
