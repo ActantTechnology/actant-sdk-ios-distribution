@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                    = "ActantSDK"
-    s.version                 = "1.1.7"
+    s.version                 = "1.1.8"
     s.summary                 = "ActantSDK (iOS) #{s.version}"
     s.homepage                = "https://github.com/ActantTechnology/actant-sdk-ios-distribution"
 
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.source                  = { :git => "https://github.com/ActantTechnology/actant-sdk-ios-distribution.git", :tag => "#{s.version}" }
 
     s.frameworks = 'UIKit', 'SceneKit', 'ARKit', 'CoreLocation', 'CoreMotion'
-    s.dependency 'gRPC-Swift', '~> 1.4.2'
+    s.dependency 'gRPC-Swift', '~> 1.5.0'
     s.dependency 'OpenCV2', '~> 4.3'
 
     s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
