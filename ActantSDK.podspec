@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                    = "ActantSDK"
-    s.version                 = "1.1.8"
+    s.version                 = "1.1.9"
     s.summary                 = "ActantSDK (iOS) #{s.version}"
     s.homepage                = "https://github.com/ActantTechnology/actant-sdk-ios-distribution"
 
