@@ -1,6 +1,6 @@
 # ActantSDK iOS framework
 
-[Actant Technology](https://actanttech.com) - команда специалистов по Computer Vision, 
+[HeroDynamics](https://herodynamics.es) - команда специалистов по Computer Vision, 
 сплоченных вокруг задачи сделать AR инструментом решения бытовых и бизнес-задач.
 Мы разрабатываем технологические решения, значительно расширяющие область применения AR.
 
@@ -13,16 +13,13 @@
 
 [![Actant demo video](https://img.youtube.com/vi/UXJng18v5Po/0.jpg)](http://www.youtube.com/watch?v=UXJng18v5Po)
 
-## Инсталляция через Cocoapods
+## Инсталляция через SPM (Swift Package Manager)
 
-Добавьте в ваш `Podfile`:
-
-```
-    pod 'ActantSDK', :git => 'https://github.com/ActantTechnology/actant-sdk-ios-distribution.git'
-```
+SPM URL: `https://github.com/HeroDynamics/actant-sdk-ios-distribution`
 
 ## Свяжитесь с нами для регистрации вашего iOS приложения и получения 'API_KEY' для интеграции:
 
-+ [info@actanttech.com](mailto:info@actanttech.com)
-+ [https://actanttech.com](https://actanttech.com)
++ [admin@herodynamics.es](mailto:admin@herodynamics.es)
++ [https://herodynamics.es](https://herodynamics.es)
 + +7 909 677-88-98
++ 

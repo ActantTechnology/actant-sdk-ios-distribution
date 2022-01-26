@@ -10,11 +10,9 @@ tmp
 null
 *~
 
-
 # GIT specific #
 ################
 !.gitkeep
-
 
 # Ignore IDE and build tools #
 ##############################
@@ -22,45 +20,9 @@ null
 *.iml
 *.ipr
 *.iws
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
+/.build
+/Packages
+/*.xcodeproj
 xcuserdata/
-*.xcuserdatad
-*.xcscmblueprint
-*.xccheckout
-*.moved-aside
-xcproject4
-output/
-build/
-Build
-DerivedData
-Index
-
-## Obj-C/Swift specific
-*.hmap
-*.ipa
-
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
-
-
-# Project specific ignores #
-############################
-Manifest.lock
-Carthage
-Pods
-._*
-
-# Fastlane specific #
-#####################
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
+DerivedData/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
