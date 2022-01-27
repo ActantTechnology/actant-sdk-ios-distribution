@@ -33,7 +33,8 @@ let package = Package(
                 .product(name: "GRPC", package: "grpc-swift"),
                 .product(name: "CGRPCZlib", package: "grpc-swift")
             ],
-            path: "Sources/ActantSDK"
+            path: "Sources/ActantSDK",
+            publicHeadersPath: "Sources/ActantSDK.xcframework/Headers"
         )
     ]
 )
