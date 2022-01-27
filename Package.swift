@@ -12,7 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ActantSDK",
-            targets: ["ActantSDK", "ActantSDKFramework"]
+            targets: ["ActantSDKTargets"]
         ),
     ],
     dependencies: [
@@ -23,18 +23,17 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-            name: "ActantSDKFramework",
-            path: "Sources/ActantSDK.xcframework"
+            name: "ActantSDK",
+            path: "ActantSDK.xcframework"
         ),
         .target(
-            name: "ActantSDK",
+            name: "ActantSDKTargets",
             dependencies: [
-                "ActantSDKFramework",
+                .target(name: "ActantSDK"),
                 .product(name: "GRPC", package: "grpc-swift"),
                 .product(name: "CGRPCZlib", package: "grpc-swift")
             ],
-            path: "Sources/ActantSDK",
-            publicHeadersPath: "Sources/ActantSDK.xcframework/ios-arm64/ActantSDK.framework/Headers"
+            path: "Sources"
         )
     ]
 )
