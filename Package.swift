@@ -34,10 +34,7 @@ let package = Package(
                 .product(name: "GRPC", package: "grpc-swift"),
                 .product(name: "CGRPCZlib", package: "grpc-swift")
             ],
-            path: "Sources",
-            linkerSettings: [
-                .linkedFramework("ARKit", .when(platforms: [.iOS])),
-            ]
+            path: "Sources"
         )
     ]
 )
