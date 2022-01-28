@@ -12,6 +12,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ActantSDK",
+            type: .dynamic,
             targets: ["ActantSDKTargets"]
         ),
     ],
@@ -33,7 +34,10 @@ let package = Package(
                 .product(name: "GRPC", package: "grpc-swift"),
                 .product(name: "CGRPCZlib", package: "grpc-swift")
             ],
-            path: "Sources"
+            path: "Sources",
+            linkerSettings: [
+                .linkedFramework("ARKit", .when(platforms: [.iOS])),
+            ]
         )
     ]
 )
