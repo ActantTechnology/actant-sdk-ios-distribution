@@ -29,22 +29,24 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
-            name: "ActantSDK",
+            name: "ActantSDKFramework",
             path: "ActantSDK.xcframework"
+        ),
+        .target(
+            name: "ActantSDKDependencies",
+            dependencies: [
+                .product(name: "GRPC", package: "grpc-swift"),
+                .product(name: "CGRPCZlib", package: "grpc-swift"),
+            ],
+            path: "Sources/ActantSDKDependencies"
         ),
         .target(
             name: "ActantSDKTargets",
             dependencies: [
-                .target(name: "ActantSDK"),
-                
-                // grpc-swift
-                .product(name: "GRPC", package: "grpc-swift"),
-                .product(name: "CGRPCZlib", package: "grpc-swift"),
+                .target(name: "ActantSDKFramework"),
+                .target(name: "ActantSDKDependencies"),
             ],
-            path: "Sources",
-            linkerSettings: [
-                .linkedFramework("ARKit", .when(platforms: [.iOS])),
-            ]
+            path: "Sources/ActantSDKTargets"
         )
     ]
 )
